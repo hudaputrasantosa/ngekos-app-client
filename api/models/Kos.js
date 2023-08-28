@@ -18,9 +18,12 @@ const KosSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  distance: {
-    type: String,
+  stock: {
+    type: Number,
     required: true,
+  },
+  facility: {
+    type: [String],
   },
   photos: {
     type: [String],
@@ -34,10 +37,7 @@ const KosSchema = new mongoose.Schema({
     min: 0,
     max: 5,
   },
-  rooms: {
-    type: [String],
-  },
-  cheapestPrice: {
+  price: {
     type: Number,
     required: true,
   },
