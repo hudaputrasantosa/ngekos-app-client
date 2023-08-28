@@ -6,11 +6,12 @@ import {
   getKos,
   updateKos,
 } from "../controllers/kos.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
-router.post("/", createKos);
-router.put("/:id", updateKos);
-router.delete("/:id", deleteKos);
+router.post("/", verifyAdmin, createKos);
+router.put("/:id", verifyAdmin, updateKos);
+router.delete("/:id", verifyAdmin, deleteKos);
 router.get("/:id", getKos);
 router.get("/", getAllKos);
 
