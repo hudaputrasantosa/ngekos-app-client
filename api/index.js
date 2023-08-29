@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoute from "./routes/auth.js";
 import kosRoute from "./routes/koses.js";
@@ -17,6 +18,7 @@ const connect = async () => {
     throw error;
   }
 };
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
@@ -35,7 +37,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8000, () => {
+app.listen(8800, () => {
   connect();
-  console.log("Connected and Running at http://localhost:8000");
+  console.log("Connected and Running at http://localhost:8800");
 });
