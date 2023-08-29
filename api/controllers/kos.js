@@ -46,10 +46,44 @@ export const getKos = async (req, res) => {
 };
 
 export const getAllKos = async (req, res) => {
+  const { min, max, ...other } = req.query;
   try {
-    const getKoses = await Kos.find();
+    const getKoses = await Kos.find({
+      ...other,
+      price: { $gt: min - 1 || 1, $lt: max + 1 || 100000000 },
+    }).limit(req.query.limit);
     res.status(200).send(getKoses);
   } catch (error) {
     res.status(500).json(error);
+  }
+};
+
+export const countByCity = async (req, res) => {
+  const cities = req.query.cities.split(",");
+  try {
+    const list = await Promise.all(
+      cities.map((city) => {
+        return Kos.countDocuments({ city: city });
+      })
+    );
+    res.status(200).json(list);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const countByType = async (req, res) => {
+  try {
+    const countPutra = await Kos.countDocuments({ type: "putra" });
+    const countPutri = await Kos.countDocuments({ type: "putri" });
+    const countCampuran = await Kos.countDocuments({ type: "campuran" });
+    const listType = [
+      { type: "putra", count: countPutra },
+      { type: "putri", count: countPutri },
+      { type: "campuran", count: countCampuran },
+    ];
+    res.status(200).json(listType);
+  } catch (error) {
+    next(error);
   }
 };
