@@ -1,0 +1,65 @@
+.navbar {
+  height: 60px; /* Tambahkan tinggi untuk memadukan ruang navigasi */
+  background-color: #003580;
+  display: flex;
+  align-items: center; /* Pusatkan vertikal */
+  justify-content: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Berikan padding di kedua sisi */
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 24px; /* Ukuran font untuk logo */
+}
+.navItems {
+  display: flex;
+  align-items: center;
+}
+
+.navButton {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white; /* Ubah warna teks tombol */
+  background-color: transparent; /* Hapus background tombol */
+}
+
+/* Gaya untuk tampilan layar yang lebih kecil (mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto; /* Gunakan tinggi otomatis */
+    padding: 10px 0; /* Berikan padding atas dan bawah */
+  }
+
+  .navContainer {
+    flex-direction: column; /* Atur elemen dalam tampilan vertikal */
+    align-items: flex-start; /* Geser ke kiri */
+    padding: 10px; /* Berikan padding di semua sisi */
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px; /* Jarak antara logo dan tombol */
+  }
+
+   .navItems {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    flex-direction: row; /* Ubah arah flex */
+    align-items: center;
+    margin: 0; /* Hapus margin atas */
+  }
+  .navButton {
+    margin: 5px 0; /* Berikan jarak antara tombol-tombol */
+  }
+}
