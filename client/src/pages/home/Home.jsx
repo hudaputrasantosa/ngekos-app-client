@@ -2,8 +2,8 @@ import Featured from "../../components/featured/Featured";
 import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
+import TestimoniList from "../../components/testimoniList/TestimoniList";
 import PropertyList from "../../components/propertyList/PropertyList";
 import "./home.css";
 
@@ -13,15 +13,16 @@ const Home = () => {
       <Navbar />
       <Header/>
       <div className="homeContainer">
-         <h1 className="homeTitle">Populer Cities</h1>
+         <h1 className="homeTitle">Kota dengan Kos Terpopuler</h1>
         <Featured/>
-        <h1 className="homeTitle">Browse by property type</h1>
-        <PropertyList/>
-        <h1 className="homeTitle">Homes guests love</h1>
+        {/* <h1 className="homeTitle">Cari Kos berdasarkan Tipe</h1>
+        <PropertyList/> */}
+        <h1 className="homeTitle">Rekomendasi Kos</h1>
         <FeaturedProperties/>
-        <MailList/>
-        <Footer/>
+         <h1 className="homeTitle" style={{ textAlign: "center" }}>Testimoni dari Penyewa Kos</h1>
+        <TestimoniList/>        
       </div>
+      <Footer/>
     </div>
   );
 };
