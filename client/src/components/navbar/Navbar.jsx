@@ -6,11 +6,11 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{ color:"inherit", textDecoration: "none" }}>
-        <span className="logo">Ngekoss</span>
+        <span className="logo">Ngekoss.id</span>
         </Link>
         <div className="navItems">
-          <button className="navButton">Register</button>
-          <button className="navButton">Login</button>
+          <button className="navButton">Daftar</button>
+          <button className="navButton">Masuk</button>
         </div>
       </div>
     </div>

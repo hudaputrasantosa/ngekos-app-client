@@ -31,6 +31,7 @@
   left: 20px;
   width: calc(100% - 40px); /* Lebar teks sama dengan parent minus margin */
   text-align: center; /* Pusatkan teks */
+  text-transform: capitalize;
 }
 
 /* Gaya untuk tampilan layar yang lebih kecil (mobile) */

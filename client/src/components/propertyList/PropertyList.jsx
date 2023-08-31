@@ -10,7 +10,7 @@ const PropertyList = () => {
   ];
   return (
     <div className="pList">
- { loading? ("Loading.. please wait") : ( <>
+ { loading ? ("Loading.. please wait") : ( <>
 { data && images.map((img, i) => ( 
 <div className="pListItem">
         <img

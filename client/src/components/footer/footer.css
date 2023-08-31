@@ -1,11 +1,15 @@
 .footer {
-  width: 100%;
-  max-width: 1024px; /* Ubah menjadi max-width */
-  margin: 0 auto;
   font-size: 14px; /* Tingkatkan ukuran font untuk keterbacaan yang lebih baik */
   padding: 20px 0; /* Berikan ruang di atas dan bawah footer */
   border-top: 1px solid #ddd; /* Berikan garis atas untuk memisahkan dari konten di atas */
-  /* text-align: center; Pusatkan teks di tengah */
+  background-color: #cf1818;
+  color: aliceblue;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto; /* Pusatkan container */
 }
 
 .fLists {
@@ -13,6 +17,7 @@
   display: flex;
   justify-content: center; /* Pusatkan item pada tampilan desktop */
   flex-wrap: wrap; /* Baris baru pada layar kecil */
+  padding-bottom: 8px;
 }
 
 .fList {
@@ -30,6 +35,17 @@
 
 .fListItem:hover {
   color: #0071c2; /* Ubah warna saat hover */
+}
+
+.fParagraf{
+  font-size: 8pt;
+  text-align: center;
+  padding: 12px 0px 30px 0px;
+  border-bottom: 1px solid #ddd;
+}
+.fText{
+  padding: 20px 0px 5px 0px;
+  text-align: center;
 }
 
 /* Gaya untuk tampilan layar yang lebih kecil (mobile) */
