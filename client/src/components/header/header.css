@@ -1,5 +1,5 @@
 .header {
-  background-color: #003580;
+  background-color: #cf1818;
   color: white;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@
 }
 
 .headerBtn {
-  background-color: #0071c2;
+  background-color: #cf1818;
   color: white;
   font-weight: 500;
   border: none;
@@ -64,6 +64,7 @@
 }
 
 .headerSearchInput {
+  padding: 10px 0px 10px 0px;
   border: none;
   outline: none;
   flex: 1; /* Ambil sisa lebar yang tersedia */
