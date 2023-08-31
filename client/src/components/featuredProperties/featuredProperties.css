@@ -9,7 +9,7 @@
 
 .fpItem {
   flex-basis: calc(25% - 15px); /* 4 kolom dengan jarak 20px */
-  gap: 10px;
+  gap: 8px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -17,41 +17,58 @@
 
 .fpImg {
   width: 100%;
-  height: 220px;
+  height: 175px;
   object-fit: cover;
-    border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .fpName {
   color: #333;
   font-weight: bold;
-  margin-top: 5px;
+  font-size: 11pt;
 }
 
 .fpCity {
   font-weight: 300;
+  text-transform: capitalize;
+  font-size: 10pt;
+  /* position: relative;
+  top: -5px; */
+  color: #4d4d4d;
 }
 
 .fpPrice {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 11pt;
+  color: #333;
+  /* position: relative;
+  top: -8px; */
 }
 
 .fpRating {
   display: flex;
   align-items: center;
+   /* position: relative;
+  top: -8px; */
 }
 
 .fpRating>button {
-  background-color: #003580;
+  background-color: #f3c00b;
   color: white;
   border: none;
-  padding: 3px;
+  border-radius: 5px;
+  padding: 4px;
   margin-right: 10px;
   font-weight: bold;
 }
 
 .fpRating>span {
-  font-size: 14px;
+  font-size: 10pt;
+  text-transform: capitalize;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  padding: 4px;
+  color: #333;
 }
 
 /* Gaya untuk tampilan layar yang lebih kecil (mobile) */
