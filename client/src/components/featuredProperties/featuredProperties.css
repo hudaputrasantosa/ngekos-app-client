@@ -9,7 +9,7 @@
 
 .fpItem {
   flex-basis: calc(25% - 15px); /* 4 kolom dengan jarak 20px */
-  gap: 8px;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -26,6 +26,10 @@
   color: #333;
   font-weight: bold;
   font-size: 11pt;
+ /* white-space: nowrap;  Mencegah teks melipat ke bawah
+  overflow: hidden; /* Menyembunyikan teks yang melebihi batasan
+  text-overflow: ellipsis; /* Menambahkan elipsis (...) pada teks yang dipotong 
+  max-width: 250px;*/
 }
 
 .fpCity {

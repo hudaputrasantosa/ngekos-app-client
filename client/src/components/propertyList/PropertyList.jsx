@@ -18,7 +18,7 @@ const PropertyList = () => {
           alt=""
           className="pListImg"
         />
-        <div className="pListTitles" key={i}>
+        <div className="pListTitles" key={data.id}>
           <h1>{data[i]?.type}</h1>
           <h2>{data[i]?.count} Kos {data[i]?.type}</h2>
         </div>

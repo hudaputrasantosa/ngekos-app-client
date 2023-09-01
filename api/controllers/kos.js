@@ -46,12 +46,13 @@ export const getKos = async (req, res) => {
 };
 
 export const getAllKos = async (req, res) => {
-  const { min, max, ...other } = req.query;
+  const { min, max, limit, ...other } = req.query;
   try {
     const getKoses = await Kos.find({
       ...other,
       price: { $gt: min - 1 || 1, $lt: max + 1 || 100000000 },
-    }).limit(req.query.limit);
+    }).limit(limit);
+
     res.status(200).send(getKoses);
   } catch (error) {
     res.status(500).json(error);
