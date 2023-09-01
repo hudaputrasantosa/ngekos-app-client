@@ -6,7 +6,7 @@
   -webkit-overflow-scrolling: touch; /* Efek animasi scrolling untuk WebKit */
   scroll-snap-type: x mandatory; /* Mengaktifkan snap saat scrolling */
   scroll-behavior: smooth; /* Efek animasi smooth saat scroll */
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .card {
@@ -22,8 +22,8 @@
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
   margin: 20px auto 0;
@@ -38,23 +38,25 @@
 .card-content {
   padding: 20px;
   flex: 1;
+  text-align: center;
 }
 
 .card-title {
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 12pt;
+  margin: 2px 0px;
 }
 
 .card-position {
   font-weight: bold;
   color: #777;
-  margin: 0;
+  font-size: 10pt;
+  margin-bottom: 8px;
 }
 
 .card-description {
-  font-size: 14px;
+  font-size: 10pt;
   color: #333;
-  line-height: 1.5;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
