@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
@@ -19,16 +20,19 @@ const FeaturedProperties = () => {
 { data && data.map(item =>(
   <div className="fpItem" key={item._id}>
     <img
-      src={item.photos}
+      src={item.photos[0]}
       alt=""
       className="fpImg"
     />
     <TruncateText text={item.name} maxLength={28} />
-    <span className="fpCity">{item.city}</span>
-    <span className="fpPrice">{(item.price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })} / Bulan</span>
+    <span className="fpCity">{item.city} <button className="btn-detail-rate">4.5</button></span> 
+    <span className="fpPrice">{(item.price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }).substring(0, (item.price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }).length - 3 )} / Bulan</span>
     <div className="fpRating">
-      <button>4.5</button>
+      
       <span>Kos {item.type}</span>
+       <Link to={`/hotels/${item._id}`}>
+       <button className="btn-detail">Lihat Detail</button>
+       </Link>
     </div>
   </div>
   ))}
