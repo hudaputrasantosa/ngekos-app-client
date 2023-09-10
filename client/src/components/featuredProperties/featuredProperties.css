@@ -56,13 +56,23 @@
   top: -8px; */
 }
 
-.fpRating>button {
-  background-color: #f3c00b;
+.btn-detail{
+  background-color: #d11111;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 4px;
-  margin-right: 10px;
+  margin-left: 15px ;
+  font-weight: bold;
+}
+
+.btn-detail-rate {
+  background-color: #f3c00b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1px 3px 1px 3px;
+  margin-left: 8px;
   font-weight: bold;
 }
 
@@ -73,6 +83,7 @@
   border-radius: 5px;
   padding: 4px;
   color: #333;
+  padding-right: 5px;
 }
 
 /* Gaya untuk tampilan layar yang lebih kecil (mobile) */
