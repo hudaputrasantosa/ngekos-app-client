@@ -26,7 +26,7 @@ const SearchItem = ({item}) => {
         </div>
         <div className="siDetailTexts">
           <span className="siPrice">{(item.price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }).substring(0, (item.price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }).length - 3 )}</span>
-          <Link to={`/hotels/${item._id}`}>
+          <Link to={`/kos/${item._id}`}>
           <button className="siCheckButton">Cek Sekarang</button>
           </Link>
         </div>
