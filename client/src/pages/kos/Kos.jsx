@@ -1,4 +1,4 @@
-import "./hotel.css";
+import "./kos.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -13,13 +13,13 @@ import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useLocation } from "react-router-dom";
 
-const Hotel = () => {
+const Kos = () => {
   const id = useLocation().pathname.split("/")[2];
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const {data, loading, error, reFetch} = useFetch(`/koses/find/${id}`);
 
-  console.log(data);
+  // console.log(data);
 
   const photos = [
     {
@@ -133,4 +133,4 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+export default Kos;

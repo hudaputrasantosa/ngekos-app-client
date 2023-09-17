@@ -1,7 +1,7 @@
 .searchItem {
   border: 1px solid lightgray;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -10,19 +10,20 @@
 
 .siImg {
   width: 200px;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .siDesc {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   flex: 2;
 }
 
 .siTitle {
-  font-size: 20px;
+  font-size: 19px;
   color: #0071c2;
 }
 
@@ -32,20 +33,33 @@
 
 .siTaxiOp {
   font-size: 12px;
-  background-color: #008009;
+  background-color: #f3c00b;
   color: white;
   width: max-content;
-  padding: 3px;
-  border-radius: 5px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+
+.hotelAddress {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .siSubtitle{
   font-size: 12px;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .siFeatures{
   font-size: 12px;
+}
+.siFeaturesFacility{
+  margin-top: 5px;
+  color: #7e7e7e;
 }
 
 .siCancelOp{
@@ -60,26 +74,20 @@
 }
 
 .siDetails {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  margin-top: 5px;
+  /* justify-content: space-between */
 }
 
-.siRating{
-  display: flex;
-  justify-content: space-between
-}
-
-.siRating>span{
-  font-weight: 500;
-}
-.siRating>button{
- background-color: #003580;
- color: white;
- padding: 5px;
+.siDetailsStock{
+ border-radius: 5px;
+ color: rgb(205, 12, 12);
  font-weight: bold;
  border: none;
+ font-size: 10pt;
+ text-align: right;
 }
 
 .siDetailTexts{
@@ -90,7 +98,9 @@
 }
 
 .siPrice{
-  font-size: 24px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .siTaxOp{
@@ -99,10 +109,11 @@
 }
 
 .siCheckButton{
-  background-color: #0071c2;
+  margin-top: 10px;
+  background-color: #d11111;
   color: white;
   font-weight: bold;
-  padding: 10px 5px;
+  padding: 10px 15px;
   border: none;
   cursor: pointer;
   border-radius: 5px;

@@ -23,31 +23,17 @@ const List = () => {
   return (
     <div>
       <Navbar />
-      <Header type="list" />
+      {/* <Header type="list" /> */}
       <div className="listContainer">
         <div className="listWrapper">
           <div className="listSearch">
-            <h1 className="lsTitle">Search</h1>
+            <h1 className="lsTitle">Pencarian</h1>
             <div className="lsItem">
-              <label>Destination</label>
+              <label>Lokasi</label>
               <input placeholder={destination} onChange={e=>setDestination(e.target.value)} type="text" />
             </div>
-            {/* <div className="lsItem">
-              <label>Check-in Date</label>
-              <span onClick={() => setOpenDate(!openDate)}>{`${format(
-                date[0].startDate,
-                "MM/dd/yyyy"
-              )} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
-              {openDate && (
-                <DateRange
-                  onChange={(item) => setDate([item.selection])}
-                  minDate={new Date()}
-                  ranges={date}
-                />
-              )}
-            </div> */}
             <div className="lsItem">
-              <label>Options</label>
+              <label>Pilihan</label>
               <div className="lsOptions">
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
@@ -63,7 +49,7 @@ const List = () => {
                 </div>
               </div>
             </div>
-            <button onClick={handleClick}>Search</button>
+            <button onClick={handleClick}>Cari Sekarang</button>
           </div>
           <div className="listResult">
            { loading? "Loading, Please wait.." : <>
