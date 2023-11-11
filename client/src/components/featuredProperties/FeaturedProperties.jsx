@@ -30,7 +30,7 @@ const FeaturedProperties = () => {
     <div className="fpRating">
       
       <span>Kos {item.type}</span>
-       <Link to={`/hotels/${item._id}`}>
+       <Link to={`/kos/${item._id}`}>
        <button className="btn-detail">Lihat Detail</button>
        </Link>
     </div>
