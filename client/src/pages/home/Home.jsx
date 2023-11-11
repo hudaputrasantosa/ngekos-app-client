@@ -14,8 +14,6 @@ const Home = () => {
       <div className="homeContainer">
          <h1 className="homeTitle">Kota dengan Kos Terpopuler</h1>
         <Featured/>
-        {/* <h1 className="homeTitle">Cari Kos berdasarkan Tipe</h1>
-        <PropertyList/> */}
         <h1 className="homeTitle">Rekomendasi Kos</h1>
         <FeaturedProperties/>
          <h1 className="homeTitle" style={{ textAlign: "center" }}>Testimoni dari Penyewa Kos</h1>
