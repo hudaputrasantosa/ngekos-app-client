@@ -17,10 +17,10 @@ const SearchReducer = (state, action) => {
   }
 };
 
-export const SearchContextProvideer = ({ children }) => {
+export const SearchContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(SearchReducer, INITIAL_STATE);
   return (
-    <SearchContext.Provider value={{ city: state.city }}>
+    <SearchContext.Provider value={{ city: state.city, dispatch }}>
       {children}
     </SearchContext.Provider>
   );
