@@ -1,0 +1,159 @@
+.header {
+  background-color: #cf1818;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Tambahkan ini untuk perataan vertikal */
+  position: relative;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  padding: 40px 0px 80px 0px;
+  margin: 0 auto; /* Pusatkan container */
+}
+
+.headerContainer.listMode {
+  margin-top: 20px; /* Atur margin atas */
+}
+
+.headerTitle {
+  font-size: 30pt;
+  text-align: center; /* Perataan paragraf */
+}
+
+.headerDesc {
+  margin: 20px 0;
+  text-align: center; /* Perataan paragraf */
+}
+
+.headerBtn {
+  background-color: #cf1818;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%; /* Tombol mengisi lebar container */
+}
+
+.headerSearch {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  margin: auto; /* Tengahkan horizontal */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 600px; /* Batasi lebar maksimum */
+  background-color: white;
+  border: 3px solid #febb02;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerSearchInput {
+  padding: 10px 0px 10px 0px;
+  border: none;
+  outline: none;
+  flex: 1; /* Ambil sisa lebar yang tersedia */
+}
+
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
+  margin-left: 10px; /* Berikan jarak antara input dan teks */
+}
+
+.date,
+.options {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+.options {
+  display: none;
+}
+
+.optionItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+/* Gaya untuk tampilan layar yang lebih kecil (mobile) */
+@media (max-width: 768px) {
+  .header {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .headerContainer{
+    padding-top: 20px;
+  }
+
+  .headerList {
+    justify-content: center;
+  }
+
+  .headerListItem.active {
+    padding: 5px; /* Kurangi padding pada item aktif */
+  }
+
+  .headerTitle {
+  font-size: 20pt;
+  text-align: center; /* Perataan paragraf */
+}
+
+  .headerDesc {
+    text-align: center;
+  }
+
+  .headerSearch {
+    display: block;
+    bottom: -50px; /* Geser lebih ke atas */
+  }
+
+  .date,
+  .options {
+    display: none;
+  }
+}
