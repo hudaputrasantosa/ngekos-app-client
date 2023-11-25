@@ -1,0 +1,94 @@
+.fp {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fpItem {
+  flex-basis: calc(25% - 15px); /* 4 kolom dengan jarak 20px */
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.fpImg {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.fpName {
+  color: #333;
+  font-weight: bold;
+  font-size: 11pt;
+ /* white-space: nowrap;  Mencegah teks melipat ke bawah
+  overflow: hidden; /* Menyembunyikan teks yang melebihi batasan
+  text-overflow: ellipsis; /* Menambahkan elipsis (...) pada teks yang dipotong 
+  max-width: 250px;*/
+}
+
+.fpCity {
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 10pt;
+  /* position: relative;
+  top: -5px; */
+  color: #4d4d4d;
+}
+
+.fpPrice {
+  font-weight: 600;
+  font-size: 11pt;
+  color: #333;
+  /* position: relative;
+  top: -8px; */
+}
+
+.fpRating {
+  display: flex;
+  align-items: center;
+   /* position: relative;
+  top: -8px; */
+}
+
+.btn-detail{
+  background-color: #d11111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  margin-left: 15px ;
+  font-weight: bold;
+}
+
+.btn-detail-rate {
+  background-color: #f3c00b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1px 3px 1px 3px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.fpRating>span {
+  font-size: 10pt;
+  text-transform: capitalize;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  padding: 4px;
+  color: #333;
+  padding-right: 5px;
+}
+
+/* Gaya untuk tampilan layar yang lebih kecil (mobile) */
+@media (max-width: 768px) {
+  .fpItem {
+    flex-basis: calc(50% - 10px); /* 2 kolom dengan jarak 10px */
+  }
+}

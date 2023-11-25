@@ -1,0 +1,72 @@
+.footer {
+  font-size: 14px; /* Tingkatkan ukuran font untuk keterbacaan yang lebih baik */
+  padding: 20px 0; /* Berikan ruang di atas dan bawah footer */
+  border-top: 1px solid #ddd; /* Berikan garis atas untuk memisahkan dari konten di atas */
+  background-color: #cf1818;
+  color: aliceblue;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto; /* Pusatkan container */
+}
+
+.fLists {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Pusatkan item pada tampilan desktop */
+  flex-wrap: wrap; /* Baris baru pada layar kecil */
+  padding-bottom: 8px;
+}
+
+.fList {
+  list-style: none;
+  padding: 0;
+  margin: 0 15px; /* Berikan jarak pada setiap daftar */
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Tambahkan transisi warna */
+}
+
+.fListItem:hover {
+  color: #0071c2; /* Ubah warna saat hover */
+}
+
+.fParagraf{
+  font-size: 8pt;
+  text-align: center;
+  padding: 12px 0px 30px 0px;
+  border-bottom: 1px solid #ddd;
+}
+.fText{
+  padding: 20px 0px 5px 0px;
+  text-align: center;
+}
+
+/* Gaya untuk tampilan layar yang lebih kecil (mobile) */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
+
+  .fLists {
+    justify-content: flex-start; /* Geser ke kiri pada tampilan mobile */
+    margin-top: 20px; /* Berikan jarak di atas */
+  }
+
+  .fList {
+    width: 50%; /* 2 kolom pada tampilan mobile */
+    margin: 0; /* Hapus margin horizontal */
+    padding: 0 20px; /* Berikan padding pada sisi */
+    box-sizing: border-box; /* Padding tidak menambah lebar */
+  }
+
+  .fListItem {
+    margin-bottom: 5px; /* Sedikit jarak antar item */
+  }
+}
