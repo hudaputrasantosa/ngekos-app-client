@@ -64,6 +64,7 @@
   padding: 4px;
   margin-left: 15px ;
   font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-detail-rate {

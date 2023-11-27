@@ -17,7 +17,7 @@ const Kos = () => {
   const id = useLocation().pathname.split("/")[2];
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
-  const { data, loading, error, reFetch } = useFetch(`/koses/find/${id}`);
+  const { data, loading } = useFetch(`/koses/find/${id}`);
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -58,7 +58,7 @@ const Kos = () => {
               />
               <div className="sliderWrapper">
                 <img
-                  src={data.photos[slideNumber]}
+                  src={data?.photos[slideNumber]}
                   alt=""
                   className="sliderImg"
                 />
@@ -82,7 +82,7 @@ const Kos = () => {
               Excellent location – 500m from center
             </span>
             <div className="hotelImages">
-              {data.photos.map((photo, i) => (
+              {data?.photos.map((photo, i) => (
                 <div className="hotelImgWrapper" key={i}>
                   <img
                     onClick={() => handleOpen(i)}
@@ -105,7 +105,7 @@ const Kos = () => {
                   <p>
                     {" "}
                     {data?.facility.length > 0
-                      ? data.facility.join(", ")
+                      ? data?.facility.join(", ")
                       : "Tidak ditampilkan"}
                   </p>
                 </div>
